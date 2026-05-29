@@ -13,7 +13,6 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
 }
 
 body{
@@ -23,58 +22,38 @@ color:white;
 overflow-x:hidden;
 }
 
-body::before{
-content:'';
+.navbar{
 position:fixed;
 top:0;
 left:0;
 width:100%;
-height:100%;
-background:
-radial-gradient(circle at center,rgba(255,0,0,.15),transparent 60%);
-z-index:-1;
-}
-
-.menu-btn{
-position:fixed;
-top:20px;
-left:20px;
-font-size:30px;
-cursor:pointer;
-z-index:1000;
-background:#111;
-padding:10px 15px;
-border-radius:12px;
-box-shadow:0 0 15px red;
-}
-
-.sidebar{
-position:fixed;
-top:0;
-left:-280px;
-width:280px;
-height:100%;
 background:#0a0a0a;
-padding-top:80px;
-transition:.4s;
-z-index:999;
-border-right:2px solid red;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+border-bottom:1px solid #222;
+z-index:1000;
 }
 
-.sidebar.active{
-left:0;
+.logo-text{
+color:#ff4444;
+font-size:1.2rem;
+font-weight:bold;
 }
 
-.sidebar a{
-display:block;
-padding:18px 25px;
+.nav-links{
+display:flex;
+gap:20px;
+}
+
+.nav-links a{
 color:white;
 text-decoration:none;
 transition:.3s;
 }
 
-.sidebar a:hover{
-background:#151515;
+.nav-links a:hover{
 color:#ff4444;
 }
 
@@ -90,7 +69,6 @@ padding:20px;
 
 .logo{
 width:220px;
-max-width:80%;
 border-radius:50%;
 box-shadow:0 0 40px red;
 animation:glow 2s infinite alternate;
@@ -108,16 +86,16 @@ text-shadow:0 0 20px red;
 }
 
 .tagline{
-color:#ff4444;
 margin-top:10px;
+color:#ff5555;
 font-size:1.2rem;
 }
 
-.hero-desc{
-max-width:700px;
+.desc{
 margin-top:15px;
-line-height:1.8;
+max-width:700px;
 color:#ccc;
+line-height:1.8;
 }
 
 .buttons{
@@ -149,17 +127,17 @@ background:#ff0000;
 transform:scale(1.08);
 }
 
-section{
+.section{
 padding:80px 20px;
 max-width:1200px;
 margin:auto;
 }
 
-.section-title{
+.title{
 text-align:center;
 margin-bottom:30px;
-font-size:2rem;
 color:#ff4444;
+font-size:2rem;
 }
 
 .grid{
@@ -173,13 +151,6 @@ background:#111;
 padding:25px;
 border-radius:15px;
 border:1px solid #222;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-border-color:red;
-box-shadow:0 0 20px rgba(255,0,0,.4);
 }
 
 .card h3{
@@ -192,13 +163,18 @@ padding:40px;
 text-align:center;
 border-top:1px solid #222;
 color:#888;
-margin-top:50px;
 }
 
 @media(max-width:768px){
-.hero h1{
-font-size:2.4rem;
+
+.nav-links{
+display:none;
 }
+
+.hero h1{
+font-size:2.5rem;
+}
+
 }
 
 </style>
@@ -206,107 +182,96 @@ font-size:2.4rem;
 
 <body>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div class="navbar">
 
-<div class="sidebar" id="sidebar">
-<a href="#home">🏠 Home</a>
-<a href="#event">🏆 Event</a>
-<a href="#minecraft">🎮 Minecraft</a>
-<a href="#stats">📊 Stats</a>
-<a href="#journey">📜 Journey</a>
-<a href="#goals">🎯 Goals</a>
-<a href="#downloads">📥 Downloads</a>
-<a href="#contact">📧 Contact</a>
+<div class="logo-text">
+THAMIZHANCORE
 </div>
 
-<section class="hero" id="home">
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="events.html">Events</a>
+<a href="videos.html">Videos</a>
+<a href="downloads.html">Downloads</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</div>
+
+<section class="hero">
 
 <img src="logo.png" class="logo">
 
 <h1>THAMIZHANCORE</h1>
 
-<p class="tagline">Gaming Beyond Limits</p>
+<p class="tagline">
+Gaming Beyond Limits
+</p>
 
-<p class="hero-desc">
+<p class="desc">
 A Tamil Gaming Community focused on Minecraft,
 Hosting, Configs, Codes and Future Expansion.
 </p>
 
 <div class="buttons">
-<a class="btn discord" href="https://discord.gg/9U395mERtf" target="_blank">Join Discord</a>
 
-<a class="btn youtube" href="https://youtube.com/@saroprince" target="_blank">YouTube</a>
+<a class="btn discord"
+href="https://discord.gg/9U395mERtf"
+target="_blank">
+Join Discord
+</a>
+
+<a class="btn youtube"
+href="https://youtube.com/@saroprince"
+target="_blank">
+YouTube
+</a>
+
 </div>
 
 </section>
 
-<section id="event">
+<section class="section">
 
-<h2 class="section-title">🏆 Latest Event</h2>
+<h2 class="title">
+📢 Latest Update
+</h2>
 
 <div class="card">
 
-<h3>ThamizhanCore PvP Tournament</h3>
-
-<p>Prize Pool: ₹300</p>
-
-<br>
-
-<p>🥇 Stebin S</p>
-<p>🥈 Jeeva</p>
-<p>🥉 PvP Cat</p>
-
-<br>
+<h3>
+PvP Tournament Completed
+</h3>
 
 <p>
-The tournament was successfully completed
-with competitive matches and strong participation.
+Prize Pool ₹300 successfully distributed.
+Season 1 completed.
 </p>
 
 </div>
 
 </section>
 
-<section id="minecraft">
+<section class="section">
 
-<h2 class="section-title">🎮 Minecraft</h2>
-
-<div class="card">
-
-<h3>Server Information</h3>
-
-<p>
-IP: play.thamizhancore.fun:25567
-</p>
-
-<br>
-
-<p>
-Platform: Java + Bedrock
-</p>
-
-</div>
-
-</section>
-
-<section id="stats">
-
-<h2 class="section-title">📊 Community Stats</h2>
+<h2 class="title">
+📊 Community Stats
+</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>👥 Members</h3>
+<h3>Discord Members</h3>
 <p>311+</p>
 </div>
 
 <div class="card">
-<h3>🏆 Events</h3>
+<h3>Events Hosted</h3>
 <p>1</p>
 </div>
 
 <div class="card">
-<h3>💰 Prize Pool</h3>
+<h3>Total Prize Pool</h3>
 <p>₹300</p>
 </div>
 
@@ -314,81 +279,19 @@ Platform: Java + Bedrock
 
 </section>
 
-<section id="journey">
+<section class="section">
 
-<h2 class="section-title">📜 Journey</h2>
+<h2 class="title">
+📜 Journey
+</h2>
 
 <div class="card">
 
 <p>🚀 13 July 2025 - RealmOfSaro Founded</p>
-
 <br>
-
 <p>🔥 Rebranded as ThamizhanCore</p>
-
 <br>
-
 <p>🌎 Growing into a Gaming Community</p>
-
-</div>
-
-</section>
-
-<section id="goals">
-
-<h2 class="section-title">🎯 Goals</h2>
-
-<div class="card">
-
-<p>✅ Website Launch</p>
-<p>✅ Domain Setup</p>
-<p>✅ First PvP Tournament</p>
-
-<br>
-
-<p>⬜ 500 Discord Members</p>
-<p>⬜ Downloads Hub Launch</p>
-<p>⬜ Multi-Game Expansion</p>
-
-</div>
-
-</section>
-
-<section id="downloads">
-
-<h2 class="section-title">📥 Downloads</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>⚙️ Configs</h3>
-<p>Coming Soon</p>
-</div>
-
-<div class="card">
-<h3>💻 Codes</h3>
-<p>Coming Soon</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2 class="section-title">📧 Contact</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Email</h3>
-<p>thamizhancore@gmail.com</p>
-</div>
-
-<div class="card">
-<h3>Discord</h3>
-<p>discord.gg/9U395mERtf</p>
-</div>
 
 </div>
 
@@ -400,10 +303,6 @@ Gaming Beyond Limits
 
 <br><br>
 
-Founded as RealmOfSaro on 13 July 2025
-
-<br><br>
-
 © 2026 ThamizhanCore
 
 <br>
@@ -411,12 +310,6 @@ Founded as RealmOfSaro on 13 July 2025
 Made by SaroPrince
 
 </footer>
-
-<script>
-function toggleMenu(){
-document.getElementById('sidebar').classList.toggle('active');
-}
-</script>
 
 </body>
 </html>
