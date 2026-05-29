@@ -3,184 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ThamizhanCore | Gaming Beyond Limits</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Orbitron',sans-serif;
-background:#050505;
-color:white;
-overflow-x:hidden;
-}
-
-.navbar{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:#0a0a0a;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 25px;
-border-bottom:1px solid #222;
-z-index:1000;
-}
-
-.logo-text{
-color:#ff4444;
-font-size:1.2rem;
-font-weight:bold;
-}
-
-.nav-links{
-display:flex;
-gap:20px;
-}
-
-.nav-links a{
-color:white;
-text-decoration:none;
-transition:.3s;
-}
-
-.nav-links a:hover{
-color:#ff4444;
-}
-
-.hero{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.logo{
-width:220px;
-border-radius:50%;
-box-shadow:0 0 40px red;
-animation:glow 2s infinite alternate;
-}
-
-@keyframes glow{
-from{box-shadow:0 0 20px red;}
-to{box-shadow:0 0 60px red;}
-}
-
-.hero h1{
-font-size:4rem;
-margin-top:25px;
-text-shadow:0 0 20px red;
-}
-
-.tagline{
-margin-top:10px;
-color:#ff5555;
-font-size:1.2rem;
-}
-
-.desc{
-margin-top:15px;
-max-width:700px;
-color:#ccc;
-line-height:1.8;
-}
-
-.buttons{
-margin-top:30px;
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.btn{
-padding:14px 28px;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-color:white;
-transition:.3s;
-}
-
-.discord{
-background:#5865F2;
-}
-
-.youtube{
-background:#ff0000;
-}
-
-.btn:hover{
-transform:scale(1.08);
-}
-
-.section{
-padding:80px 20px;
-max-width:1200px;
-margin:auto;
-}
-
-.title{
-text-align:center;
-margin-bottom:30px;
-color:#ff4444;
-font-size:2rem;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:#111;
-padding:25px;
-border-radius:15px;
-border:1px solid #222;
-}
-
-.card h3{
-margin-bottom:15px;
-color:#ff6666;
-}
-
-footer{
-padding:40px;
-text-align:center;
-border-top:1px solid #222;
-color:#888;
-}
-
-@media(max-width:768px){
-
-.nav-links{
-display:none;
-}
-
-.hero h1{
-font-size:2.5rem;
-}
-
-}
-
-</style>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<div class="sidebar" id="sidebar">
+
+<div class="close-btn" onclick="closeMenu()">✕</div>
+
+<a href="index.html">🏠 Home</a>
+<a href="events.html">🏆 Events</a>
+<a href="videos.html">📺 Videos</a>
+<a href="downloads.html">📥 Downloads</a>
+<a href="contact.html">📧 Contact</a>
+
+<br>
+
+<a href="https://discord.gg/9U395mERtf" target="_blank">
+💬 Discord
+</a>
+
+<a href="https://youtube.com/@saroprince" target="_blank">
+▶ YouTube
+</a>
+
+</div>
 
 <div class="navbar">
 
@@ -194,6 +46,10 @@ THAMIZHANCORE
 <a href="videos.html">Videos</a>
 <a href="downloads.html">Downloads</a>
 <a href="contact.html">Contact</a>
+</div>
+
+<div class="menu-btn" onclick="openMenu()">
+☰
 </div>
 
 </div>
@@ -210,7 +66,7 @@ Gaming Beyond Limits
 
 <p class="desc">
 A Tamil Gaming Community focused on Minecraft,
-Hosting, Configs, Codes and Future Expansion.
+Events, Hosting, Configs, Codes and Future Expansion.
 </p>
 
 <div class="buttons">
@@ -234,18 +90,63 @@ YouTube
 <section class="section">
 
 <h2 class="title">
-📢 Latest Update
+🏆 Latest Event
 </h2>
 
 <div class="card">
 
 <h3>
-PvP Tournament Completed
+ThamizhanCore PvP Tournament
 </h3>
 
 <p>
-Prize Pool ₹300 successfully distributed.
-Season 1 completed.
+Prize Pool: ₹300
+</p>
+
+<br>
+
+<p>
+🥇 Stebin S
+</p>
+
+<p>
+🥈 Jeeva
+</p>
+
+<p>
+🥉 PvP Cat
+</p>
+
+<br>
+
+<p>
+Season 1 Successfully Completed
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+🎮 Minecraft
+</h2>
+
+<div class="card">
+
+<h3>
+Server Information
+</h3>
+
+<p>
+IP: play.thamizhancore.fun:25567
+</p>
+
+<br>
+
+<p>
+Platform: Java + Bedrock
 </p>
 
 </div>
@@ -271,7 +172,7 @@ Season 1 completed.
 </div>
 
 <div class="card">
-<h3>Total Prize Pool</h3>
+<h3>Prize Pool Given</h3>
 <p>₹300</p>
 </div>
 
@@ -287,11 +188,43 @@ Season 1 completed.
 
 <div class="card">
 
-<p>🚀 13 July 2025 - RealmOfSaro Founded</p>
+<p>
+🚀 13 July 2025 - RealmOfSaro Founded
+</p>
+
 <br>
-<p>🔥 Rebranded as ThamizhanCore</p>
+
+<p>
+🔥 Rebranded as ThamizhanCore
+</p>
+
 <br>
-<p>🌎 Growing into a Gaming Community</p>
+
+<p>
+🌎 Growing into a Gaming Community
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+🎯 Community Goals
+</h2>
+
+<div class="card">
+
+<p>✅ Website Launch</p>
+<p>✅ Domain Setup</p>
+<p>✅ First PvP Tournament</p>
+
+<br>
+
+<p>⬜ 500 Discord Members</p>
+<p>⬜ Downloads Hub Launch</p>
+<p>⬜ Multi-Game Expansion</p>
 
 </div>
 
@@ -303,6 +236,10 @@ Gaming Beyond Limits
 
 <br><br>
 
+Founded as RealmOfSaro on 13 July 2025
+
+<br><br>
+
 © 2026 ThamizhanCore
 
 <br>
@@ -310,6 +247,8 @@ Gaming Beyond Limits
 Made by SaroPrince
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
