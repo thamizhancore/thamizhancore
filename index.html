@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ThamizhanCore | Gaming Beyond Limits</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -24,12 +26,12 @@ overflow-x:hidden;
 body::before{
 content:'';
 position:fixed;
-width:100%;
-height:100%;
 top:0;
 left:0;
+width:100%;
+height:100%;
 background:
-radial-gradient(circle at center,rgba(255,0,0,.18),transparent 55%);
+radial-gradient(circle at center,rgba(255,0,0,.15),transparent 60%);
 z-index:-1;
 }
 
@@ -39,24 +41,24 @@ top:20px;
 left:20px;
 font-size:30px;
 cursor:pointer;
-z-index:1001;
+z-index:1000;
 background:#111;
-padding:8px 15px;
-border-radius:10px;
+padding:10px 15px;
+border-radius:12px;
 box-shadow:0 0 15px red;
 }
 
 .sidebar{
 position:fixed;
-left:-280px;
 top:0;
+left:-280px;
 width:280px;
 height:100%;
-background:#0b0b0b;
+background:#0a0a0a;
+padding-top:80px;
 transition:.4s;
-z-index:1000;
-padding-top:70px;
-border-right:2px solid #ff0000;
+z-index:999;
+border-right:2px solid red;
 }
 
 .sidebar.active{
@@ -68,13 +70,12 @@ display:block;
 padding:18px 25px;
 color:white;
 text-decoration:none;
-font-size:18px;
 transition:.3s;
 }
 
 .sidebar a:hover{
 background:#151515;
-color:#ff3b3b;
+color:#ff4444;
 }
 
 .hero{
@@ -88,7 +89,7 @@ padding:20px;
 }
 
 .logo{
-width:240px;
+width:220px;
 max-width:80%;
 border-radius:50%;
 box-shadow:0 0 40px red;
@@ -106,13 +107,20 @@ margin-top:25px;
 text-shadow:0 0 20px red;
 }
 
-.hero p{
+.tagline{
+color:#ff4444;
 margin-top:10px;
-color:#ccc;
-max-width:700px;
+font-size:1.2rem;
 }
 
-.btns{
+.hero-desc{
+max-width:700px;
+margin-top:15px;
+line-height:1.8;
+color:#ccc;
+}
+
+.buttons{
 margin-top:30px;
 display:flex;
 gap:15px;
@@ -122,8 +130,8 @@ justify-content:center;
 
 .btn{
 padding:14px 28px;
-text-decoration:none;
 border-radius:10px;
+text-decoration:none;
 font-weight:bold;
 color:white;
 transition:.3s;
@@ -142,15 +150,15 @@ transform:scale(1.08);
 }
 
 section{
-padding:90px 20px;
+padding:80px 20px;
 max-width:1200px;
 margin:auto;
 }
 
-.title{
+.section-title{
 text-align:center;
+margin-bottom:30px;
 font-size:2rem;
-margin-bottom:35px;
 color:#ff4444;
 }
 
@@ -163,15 +171,15 @@ gap:20px;
 .card{
 background:#111;
 padding:25px;
-border-radius:16px;
+border-radius:15px;
 border:1px solid #222;
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 25px rgba(255,0,0,.4);
+transform:translateY(-6px);
 border-color:red;
+box-shadow:0 0 20px rgba(255,0,0,.4);
 }
 
 .card h3{
@@ -179,39 +187,20 @@ margin-bottom:15px;
 color:#ff6666;
 }
 
-.server-box{
-text-align:center;
-background:#111;
-padding:30px;
-border-radius:18px;
-border:1px solid #222;
-}
-
-.server-ip{
-margin-top:15px;
-color:#ff6b6b;
-word-break:break-word;
-}
-
-.video-card{
-background:#111;
-padding:20px;
-border-radius:15px;
-text-align:center;
-}
-
 footer{
 padding:40px;
 text-align:center;
 border-top:1px solid #222;
 color:#888;
+margin-top:50px;
 }
 
 @media(max-width:768px){
 .hero h1{
-font-size:2.5rem;
+font-size:2.4rem;
 }
 }
+
 </style>
 </head>
 
@@ -221,9 +210,11 @@ font-size:2.5rem;
 
 <div class="sidebar" id="sidebar">
 <a href="#home">🏠 Home</a>
+<a href="#event">🏆 Event</a>
 <a href="#minecraft">🎮 Minecraft</a>
-<a href="#videos">📺 Videos</a>
-<a href="#community">🌐 Community</a>
+<a href="#stats">📊 Stats</a>
+<a href="#journey">📜 Journey</a>
+<a href="#goals">🎯 Goals</a>
 <a href="#downloads">📥 Downloads</a>
 <a href="#contact">📧 Contact</a>
 </div>
@@ -234,76 +225,130 @@ font-size:2.5rem;
 
 <h1>THAMIZHANCORE</h1>
 
-<p>Gaming Beyond Limits</p>
+<p class="tagline">Gaming Beyond Limits</p>
 
-<p>
+<p class="hero-desc">
 A Tamil Gaming Community focused on Minecraft,
-Hosting, Configs, Codes and Community Growth.
+Hosting, Configs, Codes and Future Expansion.
 </p>
 
-<div class="btns">
+<div class="buttons">
 <a class="btn discord" href="https://discord.gg/9U395mERtf" target="_blank">Join Discord</a>
+
 <a class="btn youtube" href="https://youtube.com/@saroprince" target="_blank">YouTube</a>
+</div>
+
+</section>
+
+<section id="event">
+
+<h2 class="section-title">🏆 Latest Event</h2>
+
+<div class="card">
+
+<h3>ThamizhanCore PvP Tournament</h3>
+
+<p>Prize Pool: ₹300</p>
+
+<br>
+
+<p>🥇 Stebin S</p>
+<p>🥈 Jeeva</p>
+<p>🥉 PvP Cat</p>
+
+<br>
+
+<p>
+The tournament was successfully completed
+with competitive matches and strong participation.
+</p>
+
 </div>
 
 </section>
 
 <section id="minecraft">
 
-<h2 class="title">Minecraft</h2>
+<h2 class="section-title">🎮 Minecraft</h2>
 
-<div class="server-box">
+<div class="card">
 
-<h3>🟢 Server Information</h3>
+<h3>Server Information</h3>
 
-<div class="server-ip">
-play.thamizhancore.fun:25567
-</div>
+<p>
+IP: play.thamizhancore.fun:25567
+</p>
 
 <br>
 
 <p>
-Java Edition + Bedrock Edition
+Platform: Java + Bedrock
 </p>
 
 </div>
 
 </section>
 
-<section id="videos">
+<section id="stats">
 
-<h2 class="title">Latest Videos</h2>
+<h2 class="section-title">📊 Community Stats</h2>
 
 <div class="grid">
 
-<div class="video-card">
-📺 Visit SaroPrince on YouTube for tutorials,
-updates and Minecraft content.
-<br><br>
-<a class="btn youtube"
-href="https://youtube.com/@saroprince"
-target="_blank">Open Channel</a>
+<div class="card">
+<h3>👥 Members</h3>
+<p>311+</p>
+</div>
+
+<div class="card">
+<h3>🏆 Events</h3>
+<p>1</p>
+</div>
+
+<div class="card">
+<h3>💰 Prize Pool</h3>
+<p>₹300</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="community">
+<section id="journey">
 
-<h2 class="title">Community</h2>
-
-<div class="grid">
+<h2 class="section-title">📜 Journey</h2>
 
 <div class="card">
-<h3>Discord Members</h3>
-<p>311+ Members</p>
+
+<p>🚀 13 July 2025 - RealmOfSaro Founded</p>
+
+<br>
+
+<p>🔥 Rebranded as ThamizhanCore</p>
+
+<br>
+
+<p>🌎 Growing into a Gaming Community</p>
+
 </div>
 
+</section>
+
+<section id="goals">
+
+<h2 class="section-title">🎯 Goals</h2>
+
 <div class="card">
-<h3>Community Focus</h3>
-<p>Minecraft • Hosting • Configs • Codes</p>
-</div>
+
+<p>✅ Website Launch</p>
+<p>✅ Domain Setup</p>
+<p>✅ First PvP Tournament</p>
+
+<br>
+
+<p>⬜ 500 Discord Members</p>
+<p>⬜ Downloads Hub Launch</p>
+<p>⬜ Multi-Game Expansion</p>
 
 </div>
 
@@ -311,17 +356,17 @@ target="_blank">Open Channel</a>
 
 <section id="downloads">
 
-<h2 class="title">Downloads</h2>
+<h2 class="section-title">📥 Downloads</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Configs</h3>
+<h3>⚙️ Configs</h3>
 <p>Coming Soon</p>
 </div>
 
 <div class="card">
-<h3>Codes</h3>
+<h3>💻 Codes</h3>
 <p>Coming Soon</p>
 </div>
 
@@ -331,7 +376,7 @@ target="_blank">Open Channel</a>
 
 <section id="contact">
 
-<h2 class="title">Contact</h2>
+<h2 class="section-title">📧 Contact</h2>
 
 <div class="grid">
 
@@ -369,8 +414,7 @@ Made by SaroPrince
 
 <script>
 function toggleMenu(){
-document.getElementById('sidebar')
-.classList.toggle('active');
+document.getElementById('sidebar').classList.toggle('active');
 }
 </script>
 
