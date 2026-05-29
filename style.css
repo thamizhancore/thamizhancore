@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Orbitron',sans-serif;
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at center,
+rgba(255,0,0,.12),
+transparent 60%);
+z-index:-1;
+}
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:#0b0b0b;
+border-bottom:1px solid #222;
+}
+
+.logo-text{
+font-size:1.2rem;
+font-weight:700;
+color:#ff4444;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#ff4444;
+}
+
+.menu-btn{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+.sidebar{
+position:fixed;
+top:0;
+left:-280px;
+width:280px;
+height:100%;
+background:#0a0a0a;
+border-right:2px solid red;
+z-index:2000;
+transition:.3s;
+padding-top:70px;
+}
+
+.sidebar.active{
+left:0;
+}
+
+.sidebar a{
+display:block;
+padding:18px 25px;
+color:white;
+text-decoration:none;
+}
+
+.sidebar a:hover{
+background:#151515;
+color:#ff4444;
+}
+
+.close-btn{
+position:absolute;
+top:15px;
+right:20px;
+font-size:30px;
+cursor:pointer;
+}
+
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.logo{
+width:220px;
+max-width:80%;
+border-radius:50%;
+box-shadow:0 0 40px red;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+box-shadow:0 0 20px red;
+}
+to{
+box-shadow:0 0 60px red;
+}
+}
+
+.hero h1{
+font-size:4rem;
+margin-top:25px;
+text-shadow:0 0 20px red;
+}
+
+.tagline{
+margin-top:10px;
+font-size:1.2rem;
+color:#ff4444;
+}
+
+.desc{
+max-width:700px;
+margin-top:15px;
+line-height:1.8;
+color:#ccc;
+}
+
+.buttons{
+margin-top:25px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn{
+padding:14px 25px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.discord{
+background:#5865F2;
+}
+
+.youtube{
+background:#ff0000;
+}
+
+.section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+margin-bottom:30px;
+font-size:2rem;
+color:#ff4444;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:15px;
+border:1px solid #222;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:red;
+box-shadow:0 0 20px rgba(255,0,0,.3);
+}
+
+.card h2,
+.card h3{
+margin-bottom:15px;
+color:#ff6666;
+}
+
+footer{
+margin-top:50px;
+padding:40px;
+text-align:center;
+border-top:1px solid #222;
+color:#888;
+}
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.logo{
+width:170px;
+}
+
+}
