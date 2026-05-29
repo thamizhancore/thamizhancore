@@ -1,15 +1,280 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>ThamizhanCore - Gaming Beyond Limits</title>
-</head>
-<body>
-<h1>THAMIZHANCORE</h1>
-<p>Gaming Beyond Limits</p>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThamizhanCore | Gaming Beyond Limits</title>
 
-<a href="https://discord.gg/9U395mERtf">Discord</a>
-<br><br>
-<a href="https://youtube.com/@saroprince">YouTube</a>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at center,rgba(255,0,0,.15),transparent 60%);
+z-index:-1;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.logo{
+width:260px;
+max-width:80%;
+border-radius:50%;
+box-shadow:0 0 40px red;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{box-shadow:0 0 20px red;}
+to{box-shadow:0 0 60px red;}
+}
+
+h1{
+font-size:4rem;
+margin-top:25px;
+text-shadow:0 0 25px red;
+}
+
+.tagline{
+color:#ff4d4d;
+font-size:1.2rem;
+margin-top:10px;
+}
+
+.subtitle{
+margin-top:15px;
+max-width:700px;
+line-height:1.8;
+color:#ccc;
+}
+
+.buttons{
+margin-top:35px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn{
+padding:15px 30px;
+border:none;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.discord{
+background:#5865F2;
+color:white;
+}
+
+.youtube{
+background:#ff0000;
+color:white;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:2rem;
+margin-bottom:40px;
+color:#ff3c3c;
+}
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111;
+border:1px solid #222;
+padding:25px;
+border-radius:15px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:red;
+box-shadow:0 0 20px rgba(255,0,0,.4);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#ff5555;
+}
+
+.timeline{
+background:#111;
+padding:25px;
+border-radius:15px;
+line-height:2;
+text-align:center;
+}
+
+footer{
+padding:40px;
+text-align:center;
+border-top:1px solid #222;
+color:#888;
+margin-top:50px;
+}
+
+.coming{
+font-size:1.1rem;
+color:#bbb;
+text-align:center;
+}
+
+@media(max-width:768px){
+h1{
+font-size:2.3rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+<img src="logo.png" class="logo">
+
+<h1>THAMIZHANCORE</h1>
+
+<p class="tagline">Gaming Beyond Limits</p>
+
+<p class="subtitle">
+A Tamil Gaming Community focused on Minecraft, Events,
+Tournaments, Hosting and Future Expansion into multiple games.
+</p>
+
+<div class="buttons">
+<a class="btn discord" href="https://discord.gg/9U395mERtf" target="_blank">Join Discord</a>
+<a class="btn youtube" href="https://youtube.com/@saroprince" target="_blank">YouTube</a>
+</div>
+
+</div>
+
+<section>
+<h2 class="section-title">Our Journey</h2>
+
+<div class="timeline">
+🚀 RealmOfSaro Founded — 13 July 2025<br>
+🔥 Community Growth & Events<br>
+⚔️ Minecraft Tournaments & PvP Events<br>
+👑 Rebranded as ThamizhanCore<br>
+🌎 Building a Bigger Gaming Community
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Minecraft Focus</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<h3>⚔️ PvP Events</h3>
+<p>Competitive PvP tournaments and challenges.</p>
+</div>
+
+<div class="card">
+<h3>🏆 Tournaments</h3>
+<p>Community tournaments with exciting rewards.</p>
+</div>
+
+<div class="card">
+<h3>🌐 Hosting</h3>
+<p>Minecraft hosting and server management.</p>
+</div>
+
+<div class="card">
+<h3>🎮 Community</h3>
+<p>Join our growing Tamil Minecraft community.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Future Expansion</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<h3>Valorant</h3>
+</div>
+
+<div class="card">
+<h3>BGMI</h3>
+</div>
+
+<div class="card">
+<h3>Free Fire</h3>
+</div>
+
+<div class="card">
+<h3>More Games</h3>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Downloads</h2>
+
+<p class="coming">
+Coming Soon...<br><br>
+Mods • Plugins • Resource Packs • Configs • Tools
+</p>
+</section>
+
+<footer>
+Gaming Beyond Limits<br><br>
+© 2026 ThamizhanCore<br>
+Made by SaroPrince
+</footer>
 
 </body>
 </html>
