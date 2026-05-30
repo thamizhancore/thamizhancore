@@ -52,15 +52,15 @@ THAMIZHANCORE
 
 <div class="card">
 
-<h3>Server Address</h3>
+<h3>🌐 Server Address</h3>
 
 <p>
-play.thamizhancore.fun:25567
+play.thamizhancore.fun
 </p>
 
 <br>
 
-<h3>Platform</h3>
+<h3>🎮 Platform</h3>
 
 <p>
 Java Edition + Bedrock Edition
@@ -72,14 +72,33 @@ Java Edition + Bedrock Edition
 
 <section class="section">
 
+<h2 class="title">📡 Live Server Status</h2>
+
+<div class="card">
+
+<h3>Server Status</h3>
+<p id="server-status">Checking...</p>
+
+<br>
+
+<h3>Players Online</h3>
+<p id="player-count">Loading...</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
 <h2 class="title">🌍 Current Season</h2>
 
 <div class="card">
 
-<h3>Season 1</h3>
+<h3>Season 1 : The Beginning</h3>
 
 <p>
-Current active Minecraft season.
+Welcome to the first official season of ThamizhanCore.
+Build, survive, explore and enjoy with the community.
 </p>
 
 </div>
@@ -92,27 +111,27 @@ Current active Minecraft season.
 
 <div class="card">
 
-<p>
-• Community Driven
-</p>
+<p>• Survival Gameplay</p>
 
 <br>
 
-<p>
-• Java & Bedrock Support
-</p>
+<p>• Java & Bedrock Crossplay</p>
 
 <br>
 
-<p>
-• Events & Tournaments
-</p>
+<p>• Community Events</p>
 
 <br>
 
-<p>
-• Future Expansion Planned
-</p>
+<p>• Active Development</p>
+
+<br>
+
+<p>• Friendly Community</p>
+
+<br>
+
+<p>• Future Updates Planned</p>
 
 </div>
 
@@ -125,9 +144,21 @@ Current active Minecraft season.
 <div class="card">
 
 <p>🎯 Season 2</p>
+
 <br>
-<p>🎯 Own Minecraft Server</p>
+
+<p>🎯 Custom Plugins</p>
+
 <br>
+
+<p>🎯 PvP Tournaments</p>
+
+<br>
+
+<p>🎯 Economy Expansion</p>
+
+<br>
+
 <p>🎯 Bigger Community Events</p>
 
 </div>
@@ -140,7 +171,7 @@ Gaming Beyond Limits
 
 <br><br>
 
-© 2026 ThamizhanCore
+© 2025 ThamizhanCore
 
 <br>
 
@@ -149,6 +180,40 @@ Made by SaroPrince
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+
+fetch("https://api.mcsrvstat.us/3/play.thamizhancore.fun")
+.then(response => response.json())
+.then(data => {
+
+if(data.online){
+
+document.getElementById("server-status").innerHTML =
+"🟢 Online";
+
+document.getElementById("player-count").innerHTML =
+data.players.online + "/" + data.players.max;
+
+}else{
+
+document.getElementById("server-status").innerHTML =
+"🔴 Offline";
+
+document.getElementById("player-count").innerHTML =
+"0/0";
+
+}
+
+})
+.catch(() => {
+
+document.getElementById("server-status").innerHTML =
+"⚠️ Error";
+
+});
+
+</script>
 
 </body>
 </html>
