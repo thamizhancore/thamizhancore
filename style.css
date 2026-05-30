@@ -135,9 +135,10 @@ box-shadow:0 0 60px red;
 }
 
 .hero h1{
-font-size:4rem;
+font-size:clamp(2rem,8vw,4rem);
 margin-top:25px;
-text-shadow:0 0 20px red;
+text-shadow:0 0 10px red;
+word-break:break-word;
 }
 
 .tagline{
